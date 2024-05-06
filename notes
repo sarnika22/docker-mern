@@ -1,0 +1,1 @@
+workdir /app - (working directory of container is /app directory within the container) all the files are stored, all commands(all code) mentioned will run trough /app directory
