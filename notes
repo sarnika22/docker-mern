@@ -1,1 +1,12 @@
-workdir /app - (working directory of container is /app directory within the container) all the files are stored, all commands(all code) mentioned will run trough /app directory
+Containerisation - a software deployment process that bundles an application's code with all the files and libraries it needs to run on any infrastructure(makes application portable, so it can run on any device)
+
+Docker - open-source containerization platform where all the bundles and dependencies are stored in a docker container, You can run the docker image as a docker container in any machine where docker is installed without depending on the operating system.
+
+Docker file - it uses Domain Specific Language (DSL) and has instructions for creating a docker image. Docker file instruction should be in ORDER since "Docker Daemon" runs it from top top to bottom
+	Docker Daemon - is a service that manages containers on the system. It is a text document that contains necessary commands for creating a docker image.
+
+Docker image - a file comprised of multiple layers used to execute code in docker container. It acts as a set of instructions to build a docker container(like template). This image informs how a container should instantiate, determining which software components will run and how.
+
+Docker file -> docker image -> docker container
+
+workdir /app - (working directory of container to be /app directory within the container) all the files are stored, all commands(all code) mentioned will run trough /app directory
