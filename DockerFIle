@@ -1,4 +1,6 @@
-
+#each line is a layer and when docker build it will cache te reuslt for each line(layer) 
+#changes in any line will be re-run
+#run - builds image, cmd - runtime
 FROM node:20
 WORKDIR /app
 COPY package.json ./
