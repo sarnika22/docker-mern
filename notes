@@ -14,5 +14,8 @@ docker image -t img_name . -> name the docker image
 docker image ls -> lists all the images created
 docker image rm img_id -> deletes docker image
 docker run -d --name node-app node-app-image -> creates contanier, -d(detached from CLI), container name, created image name
+docker run -p 3000:3000 -d --name node-app node-app-image -> set port 
+docker exec -it node-app bash and ls-> view files in docker container
+docker ps -> list of container
 
 workdir /app - (working directory of container to be /app directory within the container) all the files are stored, all commands(all code) mentioned will run trough /app directory
