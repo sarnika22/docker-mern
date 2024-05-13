@@ -2,10 +2,10 @@
 #changes in any line will be re-run
 #run - builds image, cmd - runtime
 #before using volume changes would not update coz it takes previous changes, after using volume changes would update
-FROM node:20
+FROM node:15
 WORKDIR /app
 COPY package.json ./
 RUN npm install
 COPY . ./ 
 EXPOSE 3000
-CMD ["node", "run", "dev"] 
+CMD ["npm", "run", "dev"] 
