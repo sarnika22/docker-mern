@@ -7,15 +7,31 @@ Docker file - it uses Domain Specific Language (DSL) and has instructions for cr
 
 Docker image - a file comprised of multiple layers used to execute code in docker container. It acts as a set of instructions to build a docker container(like template). This image informs how a container should instantiate, determining which software components will run and how.
 
-Docker file -> docker image -> docker container
+Docker file -> docker image-> docker container
 
-docker build -> builds docker image
-docker image -t img_name . -> name the docker image
-docker image ls -> lists all the images created
-docker image rm img_id -> deletes docker image
-docker run -d --name node-app node-app-image -> creates contanier, -d(detached from CLI), container name, created image name
-docker run -p 3000:3000 -d --name node-app node-app-image -> set port 
-docker exec -it node-app bash and ls-> view files in docker container
-docker ps -> list of container
+* docker build . -> builds docker image
+* docker build -t img_name . -> name the docker image
+* docker image ls -> lists all the images created
+* docker image rm img_id -> deletes docker image
+* docker run -d --name node-app node-app-image -> creates contanier, -d(detached from CLI), container name, created image name
+* docker rm container_name -f -> remove container
+* docker run -p 3000:3000 -d --name node-app node-app-image -> set port 
+* docker exec -it node-app bash, ls, exit -> view files in docker container
+cat index.js -> shows contents of the specific file
+* docker ps -> list of container
+* .dockerignore -> ignore certain files like node modules
+
+* docker run -v pathToTheFolderinLocalMachine:pathToTheFolderInContainer -p 3000:3000 -d --name node-app node-app-image -> -v(volume) build mouth -> allows to sync folder in local machine to folder in docker container(/app)
+
+why? - before using volume, changes would not update coz it takes previous changes, after using volume changes would update
+
+after updating should restart node to reflect changes in browser(install nodemon)
+
+local machine path shortcut = cmd - %cd%, powershell - ${pwd}, mac - $(pwd)
+
+
+
+
+
 
 workdir /app - (working directory of container to be /app directory within the container) all the files are stored, all commands(all code) mentioned will run trough /app directory
